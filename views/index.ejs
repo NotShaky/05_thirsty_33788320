@@ -1,15 +1,14 @@
-<!doctype html>
-<html>
-  <head>
-    <title><%= shopName %></title>
-  </head>
-  <body>
-    <h1>Welcome to <%= shopName %> </h1>
-    <h2>Here are some things that we sell:</h2>
-    <ul>
-      <% for(let i = 0; i < productCategories.length; i++) { %>
-        <li><%= productCategories[i] %></li>
-      <% } %>
-    </ul>
+<%- include('partials/header.ejs') %>
+
+        <!--Home page-->
+        <h1>Welcome to <%=shopName%></h1>
+        <h2>What we sell:</h2>
+        <ul>
+            <% for(let i = 0; i < productCategories.length; i++) { %>
+            <li><%= productCategories[i] %></li>
+            <% } %>
+        </ul>
+
+    </div>
     </body>
 </html>

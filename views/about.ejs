@@ -1,10 +1,17 @@
-<!doctype html>
-<html>
-  <head>
-    <title><%= shopName %></title>
-  </head>
-  <body>
-    <h1>About <%= shopName %></h1>
-    <p>We sell all sorts of drinks</p>
-  </body>
+<%- include('partials/header.ejs') %>
+
+    <h1>About <%=shopName%></h1>
+    <p>We sell all sorts of bubble tea and baguettes!</p>
+
+    <h2>Our Locations</h2>
+    <ul>
+        <% shopLocations.forEach(function(location) { %>
+            <li>
+                <strong><%= location.address %></strong><br>
+                Manager: <strong><%= location.manager %></strong>
+            </li>
+        <% }); %>
+    </ul>
+
+</div> </body>
 </html>

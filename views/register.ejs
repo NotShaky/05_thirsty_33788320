@@ -1,18 +1,19 @@
-<!doctype html> 
-<html>  
-  <head>  
-    <title><%=shopName%></title> 
-  </head>  
-  <body>  
-    <h1> This is the register page </h1> 
-    <form method="POST" action="/registered">        
-        <p>
-        Please enter your details to register:<br/>
-        First Name:<input id="first" type="text" name="first" /><br/>
-        Last Name:<input id="last" type="text" name="last" /><br/>
-        Email:<input id="email" type="text" name="email" /><br/>
+<%- include('partials/header.ejs') %>
+
+    <!--Registration page-->
+    <h1> This is the register page </h1>
+    <form method="POST" action="/registered">
+        <label for="first">First Name:</label>
+        <input id="first" type="text" name="first"/>
+        <br>
+        <label for="last">Last Name:</label>
+        <input id="last" type="text" name="last" />
+        <br>
+        <label for="email">Email:</label>
+        <input id="email" type="email" name="email" />
+        <br><br>
         <input type="submit" value="OK" />
-        </p>
-    </form> 
-</body>  
-</html> 
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #200046;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/*Navigation*/
+.navbar {
+    background-color: #200046;
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar a {
+    color: rgb(255, 255, 255); /*text colour in navigation*/
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.nav-brand a {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-color: transparent;
+    border: none;
+}
+
+.nav-links li {
+    margin-left: 10px;
+    list-style-type: none; /* Removes bullets */
+    margin-bottom: 0; /* Overrides other li styles */
+}
+
+.nav-links a:hover {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+/*Main Content Container*/
+.container {
+    padding: 20px;
+}
+
+h1,
+h2 {
+    color: #200046;
+}
+
+h1 {
+    border-bottom: 2px solid #200046;
+    padding-bottom: 10px;
+}
+
+ul {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    list-style-type: square;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/*Forms*/
+form {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+/*Text and email inputs*/
+input[type="text"],
+input[type="email"],
+input[type="number"] {
+    padding: 8px;
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    background-color: #200046;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #555;
+}
+
+/*Label alignment and spacing*/
+label {
+    display: inline-block;
+    width: 100px;
+    margin-bottom: 10px;
+    vertical-align: middle; /*Aligns labels with inputs*/
+    font-weight: bold; /*Made labels bold*/
+}
+
+label.survey-question {
+    width: auto;
+    display: block; /*Puts it on its own line*/
+    font-weight: bold; /*Made labels bold*/
+    margin-bottom: 5px;
+}
+
+label.survey-option {
+    width: auto;
+    font-weight: bold; /*Make options bold*/
+    margin-bottom: 5px;
+}

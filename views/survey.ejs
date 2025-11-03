@@ -1,0 +1,50 @@
+<%- include('partials/header.ejs') %>
+
+<h1>Customer Survey</h1>
+<p>Your voice makes a difference!</p>
+
+<form method="POST" action="/survey_result">
+    <!--Details-->
+    <h2>Your Details</h2>
+    <label for="first_name">First Name:</label>
+    <input id="first_name" type="text" name="first_name" required />
+    <br />
+    <label for="surname">Last Name:</label>
+    <input id="surname" type="text" name="surname" required />
+    <br />
+    <label for="email">Email:</label>
+    <input id="email" type="email" name="email" required />
+    <br /><br />
+
+    <!--Survey Questions-->
+    <h2>Survey Questions</h2>
+
+    <!--Selection (single choice - radio buttons)-->
+    <label class="survey-question">Which of the following categories do you most prefer?</label><br />
+    <% productCategories.forEach(function(category, index) { %>
+        <span style="margin-left: 20px">
+            <input type="radio" id="cat-<%= index %>" name="drink_category" value="<%= category %>" />
+            <label for="cat-<%= index %>" class="survey-option"><%= category %></label>
+        </span>
+        <br />
+    <% }); %>
+    <br />
+
+    <!--Age-->
+    <label for="age" class="survey-question">How old are you?</label>
+    <input id="age" type="text" name="age" style="width: 60px" />
+    <br /><br />
+
+    <!--Student status (single choice)-->
+    <label class="survey-question">Are you a student?</label>
+    <span style="margin-left: 20px">
+        <input type="radio" id="is_student_yes" name="is_student" value="yes" />
+        <label for="is_student_yes" class="survey-option">Yes</label>
+
+        <input type="radio" id="is_student_no" name="is_student" value="no" />
+        <label for="is_student_no" class="survey-option">No</label>
+    </span>
+    <br /><br />
+
+    <input type="submit" value="Submit Survey" />
+</form>
