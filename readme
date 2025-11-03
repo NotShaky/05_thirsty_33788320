@@ -1,57 +1,53 @@
-# Thirsty Student Shop
+# Shaky's Boba & Baguettes
 
-A simple web app
+A small Express + EJS web app showcasing products, search, registration, and a short customer survey.
 
-## What You Can Do
+## Features
 
--   **See Products:** Browse categories like Boba, Sandwiches, Soft Drinks, and Hot Drinks.
--   **About Page:** Learn more about the shop.
--   **Search:** Find products by name or category.
--   **Register:** Sign up with your name and email.
--   **Survey:** Share feedback via a short customer survey.
--   **Easy Navigation:** Use the menu to get around.
+- Browse product categories (Boba Milk Tea, Boba Fruit Tea, Baguettes, Snacks)  
+- About page with shop info  
+- Search products by name or category  
+- Register with name and email  
+- Complete a short survey and view results  
+- Simple navigation header shared across pages
 
-## How the Project is Organized
+## Project structure
 
-```
 .
-├── index.js                    # Main app file
-├── package.json                # Project info and dependencies
-├── readme.md                   # This file
-├── routes/
-│   └── main.js                 # Handles page routes
-├── views/
-│   ├── index.ejs               # Home page template
-│   ├── about.ejs               # About page template
-│   ├── search.ejs              # Search form page
-│   ├── search_result.ejs       # Search results page
-│   ├── register.ejs            # Registration form page
-│   ├── registered.ejs          # Registration confirmation page
-│   ├── survey.ejs              # Customer survey form page
-│   ├── survey_result.ejs       # Survey submission results page
-│   └── partials/
-│       └── header.ejs          # Shared menu/header
-└── public/
-    └── css/
-        └── main.css            # Stylesheet for the application
+├── index.js                    # App entry point  
+├── package.json                # Project metadata + dependencies  
+├── readme                      # This file  
+├── routes/  
+│   └── main.js                 # Route handlers  
+├── views/                      # EJS templates  
+│   ├── index.ejs  
+│   ├── about.ejs  
+│   ├── search.ejs  
+│   ├── search_result.ejs  
+│   ├── register.ejs  
+│   ├── registered.ejs  
+│   ├── survey.ejs  
+│   ├── survey_result.ejs  
+│   └── partials/  
+│       └── header.ejs  
+└── public/  
+    └── css/  
+        └── stylesheet.css            # Application stylesheet
+
+## Requirements
+
+- Node.js (v14+ recommended)  
+- npm
+
+## Install
+
+Open a terminal in the project folder and run:
+
+```sh
+npm install
 ```
 
-## How to Run It
-
-1. Download or clone this project.
-2. Open a terminal in the project folder.
-3. Install the needed packages:
-
-   ```sh
-   npm install
-   ```
-
-## Dependencies
-
--   **express** (^5.1.0): Web application framework
--   **ejs** (^3.1.10): Template engine for rendering dynamic HTML
-
-## Running the Application
+## Run
 
 Start the server:
 
@@ -59,26 +55,17 @@ Start the server:
 node index.js
 ```
 
-4. Open your browser and go to [http://localhost:8000](http://localhost:8000)
+Open http://localhost:8000 in your browser.
 
-## Main Pages
+## Routes
 
--   `/` - Home
--   `/about` - About the shop
--   `/search` - Search for products
--   `/register` - Sign up
--   `/survey` - Customer survey
+- /         — Home  
+- /about    — About the shop  
+- /search   — Search page  
+- /register — Registration form  
+- /survey   — Customer survey
 
-## How to Use
+## Notes
 
--   **To Search:** Go to the Search page, type what you want, and pick a category.
--   **To Register:** Go to Register, fill in your details, and submit.
--   **To Take the Survey:** Go to Survey, enter your details, answer the questions (age, preferred drink category, student status), and submit to see your results.
-
-## Styling
-
-The application uses a custom CSS stylesheet located at `public/css/main.css` that provides:
-
--   Dark navigation bar with hover effects
--   Clean, modern form styling
--   Responsive layout with consistent spacing
+- Static assets are expected under public/ (CSS at public/css/main.css).  
+- If navigation displays as a bulleted list, ensure the stylesheet is served (express.static) and that .nav-links has list-style removed in CSS.
